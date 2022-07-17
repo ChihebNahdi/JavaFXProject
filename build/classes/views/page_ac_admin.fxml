@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="649.0" prefWidth="1214.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Page_ac_adminController">
+    <stylesheets>
+        <URL value="@page_ac_admin.css" />
+    </stylesheets>
+   <children>
+      <TableView fx:id="table" layoutX="15.0" layoutY="412.0" prefHeight="194.0" prefWidth="795.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="75.0" text="Car ID" />
+          <TableColumn fx:id="brand" prefWidth="107.0" text="Car Brand" />
+            <TableColumn fx:id="model" prefWidth="107.0" text="Car Model" />
+            <TableColumn fx:id="km" prefWidth="109.0" text="Kilometrage " />
+            <TableColumn fx:id="price" prefWidth="104.0" text="Price" />
+            <TableColumn fx:id="img" prefWidth="165.0" text="Image" />
+            <TableColumn fx:id="color" prefWidth="105.0" text="Color" />
+        </columns>
+      </TableView>
+      <ChoiceBox fx:id="cb" layoutX="890.0" layoutY="437.0" prefHeight="155.0" prefWidth="140.0" stylesheets="@../values/style.css">
+         <styleClass>
+            <String fx:value="add-btn" />
+            <String fx:value="shadow" />
+            <String fx:value="add-btn" />
+         </styleClass></ChoiceBox>
+      <Button fx:id="getchoix" layoutX="1079.0" layoutY="494.0" mnemonicParsing="false" onAction="#get_choix" text="OK" />
+      <TableView fx:id="tabres" layoutX="14.0" layoutY="97.0" prefHeight="194.0" prefWidth="578.0">
+         <columns>
+            <TableColumn fx:id="id_res" minWidth="5.0" prefWidth="112.0" text="ID Reservation" />
+            <TableColumn fx:id="id_car_res" prefWidth="126.0" text=" ID Car reserver" />
+            <TableColumn fx:id="start_date" prefWidth="91.0" text="Start date" />
+            <TableColumn fx:id="end_date" prefWidth="107.0" text="End date " />
+            <TableColumn fx:id="price1" minWidth="0.0" prefWidth="0.0" text="Price" />
+            <TableColumn fx:id="id_user" prefWidth="71.0" text="ID USER" />
+            <TableColumn fx:id="price_res" prefWidth="78.0" text="Price" />
+         </columns>
+      </TableView>
+      <Label layoutX="187.0" layoutY="365.0" prefHeight="34.0" prefWidth="87.0" text=" Cars">
+         <font>
+            <Font name="System Italic" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="187.0" layoutY="53.0" prefHeight="34.0" prefWidth="164.0" text="Reservations">
+         <font>
+            <Font name="System Italic" size="23.0" />
+         </font>
+      </Label>
+      <Label fx:id="screen" layoutX="362.0" layoutY="478.0" prefHeight="21.0" prefWidth="265.0" textFill="#e8710a" />
+      <TextField layoutX="14.0" layoutY="603.0" prefHeight="31.0" prefWidth="70.0" />
+      <TextField layoutX="84.0" layoutY="603.0" prefHeight="31.0" prefWidth="117.0" />
+      <TextField layoutX="201.0" layoutY="603.0" prefHeight="31.0" prefWidth="107.0" />
+      <TextField layoutX="305.0" layoutY="603.0" prefHeight="31.0" prefWidth="107.0" />
+      <TextField layoutX="412.0" layoutY="603.0" prefHeight="31.0" prefWidth="107.0" />
+      <TextField layoutX="519.0" layoutY="603.0" prefHeight="31.0" prefWidth="164.0" />
+      <TableView fx:id="tabuser" layoutX="616.0" layoutY="97.0" prefHeight="194.0" prefWidth="592.0">
+         <columns>
+            <TableColumn fx:id="id_u" minWidth="2.0" prefWidth="67.0" text="ID User" />
+            <TableColumn fx:id="f_name" prefWidth="97.0" text="First Name" />
+            <TableColumn fx:id="l_name" minWidth="0.0" prefWidth="88.0" text="Last Name" />
+            <TableColumn fx:id="u_name" prefWidth="173.0" text="UserName" />
+            <TableColumn fx:id="password" minWidth="0.0" prefWidth="96.0" text="Password" />
+            <TableColumn fx:id="u_r" prefWidth="85.0" text="Role" />
+         </columns>
+      </TableView>
+      <Label layoutX="847.0" layoutY="53.0" prefHeight="34.0" prefWidth="87.0" text="Users">
+         <font>
+            <Font name="System Italic" size="23.0" />
+         </font>
+      </Label>
+      <TextField layoutX="14.0" layoutY="291.0" prefHeight="31.0" prefWidth="117.0" />
+      <TextField layoutX="129.0" layoutY="291.0" prefHeight="31.0" prefWidth="117.0" />
+      <DatePicker layoutX="237.0" layoutY="291.0" prefHeight="31.0" prefWidth="107.0" />
+      <DatePicker layoutX="344.0" layoutY="291.0" prefHeight="31.0" prefWidth="107.0" />
+      <TextField layoutX="451.0" layoutY="291.0" prefHeight="31.0" prefWidth="70.0" />
+      <TextField layoutX="521.0" layoutY="291.0" prefHeight="31.0" prefWidth="70.0" />
+      <ColorPicker layoutX="683.0" layoutY="603.0" prefHeight="31.0" prefWidth="126.0" />
+      <TextField layoutX="616.0" layoutY="291.0" prefHeight="31.0" prefWidth="70.0" />
+      <TextField layoutX="686.0" layoutY="291.0" prefHeight="31.0" prefWidth="95.0" />
+      <TextField layoutX="781.0" layoutY="291.0" prefHeight="31.0" prefWidth="95.0" />
+      <TextField layoutX="876.0" layoutY="291.0" prefHeight="31.0" prefWidth="164.0" />
+      <PasswordField layoutX="1040.0" layoutY="291.0" prefHeight="31.0" prefWidth="107.0" />
+      <TextField layoutX="1147.0" layoutY="291.0" prefHeight="31.0" prefWidth="61.0" />
+   </children>
+   <effect>
+      <ColorAdjust />
+   </effect>
+</AnchorPane>
